@@ -1,0 +1,28 @@
+{
+  "name": "Striker",
+  "version": "0.0.0",
+  "description": "GitHub Strike Editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/alimucaj/striker"
+  },
+  "keywords": [
+    "striker",
+    "github",
+    "strike",
+    "editor"
+  ],
+  "author": "Aldi Alimucaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alimucaj/striker/issues"
+  },
+  "homepage": "https://github.com/alimucaj/striker",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
