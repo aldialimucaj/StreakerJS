@@ -10,7 +10,7 @@
     "start": "node lib/index.js",
     "lint": "eslint src/",
     "test": "mocha --compilers js:babel-register",
-    "cover": "babel-node ./node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --recursive"
+    "cover": "babel-node ./node_modules/isparta/lib/cli cover node_modules/mocha/bin/_mocha -- --recursive"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "gulp-babel": "^6.1.1",
     "gulp-eslint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
+    "isparta": "^4.0.0",
     "istanbul": "^0.4.1"
   },
   "dependencies": {

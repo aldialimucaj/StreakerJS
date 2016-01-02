@@ -1,4 +1,4 @@
-import Gitter from '../lib/gitter';
+import Gitter from '../src/gitter';
 import chai from 'chai';
 
 let gitter = new Gitter();
