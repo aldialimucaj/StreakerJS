@@ -3,6 +3,7 @@
 
 import program from 'commander';
 import chalk from 'chalk';
+import Promise from 'promise';
 
 import Gitter from './gitter';
 const pcage = require('../package.json');
@@ -27,8 +28,7 @@ program
    .command('init')
    .description('Initialize a git repository')
    .action(() => {
-       gitter.initRepo();
-     
+       gitter.initRepo(); // find out what to do with results
    });
 
 /* Parse process arguments */
