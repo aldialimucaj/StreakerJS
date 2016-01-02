@@ -11,5 +11,5 @@ after_script:
   
 addons:
   apt:
-    packages:
-      - libstdc++6
+    sources: [ 'ubuntu-toolchain-r-test']
+    packages: ['libstdc++6']
