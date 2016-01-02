@@ -21,15 +21,15 @@ gulp.task('lint', function () {
 
 gulp.task('babel', function () { // (A)
     return gulp.src(paths.es6)
-        .pipe(sourcemaps.init()) // (B)
+        .pipe(sourcemaps.init())
         .pipe(babel())
-        .pipe(sourcemaps.write('.', // (C)
+        .pipe(sourcemaps.write('.',
             { sourceRoot: paths.sourceRoot }))
         .pipe(gulp.dest(paths.es5));
 });
 
-gulp.task('watch', function () { // (D)
+gulp.task('watch', function () {
     gulp.watch(paths.es6, ['babel', 'lint']);
 });
 
-gulp.task('default', ['watch']); // (E)
+gulp.task('default', ['watch']);
