@@ -8,3 +8,8 @@ before_script:
   
 after_script:
   - npm run cover_push
+  
+addons:
+  apt:
+    packages:
+      - libstdc++6
