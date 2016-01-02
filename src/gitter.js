@@ -10,7 +10,7 @@ export default class Gitter {
      * @param {string} repo - git repository
      */
     constructor(repo) {
-        console.log("New gitter is here")
+        
     }
     
     /**

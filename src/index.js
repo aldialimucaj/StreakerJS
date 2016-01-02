@@ -5,13 +5,14 @@ import program from 'commander';
 import chalk from 'chalk';
 
 import Gitter from './gitter';
+const pcage = require('../package.json');
 
 const gitter = new Gitter();
 const error = chalk.bold.red;
 const success = chalk.bold.green;
 
 program
-    .version('0.0.1');
+    .version(pcage.version);
 
 /* ========================================================================== */    
 program
