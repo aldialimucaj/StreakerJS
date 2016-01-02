@@ -18,5 +18,7 @@ export default class Gitter {
      */
     initRepo(path = ".") {
         console.log(success('Repository was created successfuly'));
+        
+        return true;
     }
 }
