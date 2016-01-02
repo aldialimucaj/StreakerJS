@@ -1,5 +1,22 @@
-export function sum(x, y) {
-  return x + y;
-}
+import chalk from 'chalk';
 
-export var pi = 3.141593;
+const error = chalk.bold.red;
+const success = chalk.bold.green;
+
+export default class Gitter {
+    
+    /**
+     * @constructor
+     * @param {string} repo - git repository
+     */
+    constructor(repo) {
+        console.log("New gitter is here")
+    }
+    
+    /**
+     * Initialize git repository
+     */
+    initRepo(path = ".") {
+        console.log(success('Repository was created successfuly'));
+    }
+}

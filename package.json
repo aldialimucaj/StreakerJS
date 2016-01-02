@@ -2,13 +2,13 @@
   "name": "Striker",
   "version": "0.0.0",
   "description": "GitHub Strike Editor",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
-    "striker": "./index.js"
+    "striker": "./lib/index.js"
   },
   "scripts": {
-    "start": "node index.js",
-    "lint": "eslint index.js src/",
+    "start": "node lib/index.js",
+    "lint": "eslint src/",
     "test": "mocha"
   },
   "repository": {
@@ -41,6 +41,7 @@
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "inquirer": "^0.11.1",
-    "log-update": "^1.0.2"
+    "log-update": "^1.0.2",
+    "nodegit": "^0.6.3"
   }
 }
