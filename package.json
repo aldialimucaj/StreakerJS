@@ -45,6 +45,7 @@
     "isparta": "^4.0.0",
     "istanbul": "^0.4.1",
     "jsdoc": "^3.4.0",
+    "fs-extra": "^0.26.3",
     "mocha-lcov-reporter": "^1.0.0"
   },
   "dependencies": {

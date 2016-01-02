@@ -27,11 +27,11 @@ export default class Gitter {
         
         return new Promise((fulfill, reject) => {
             
-            Repository.init(nodepath.resolve(path), 0 /* isBare */).then(function(repository) {
+            Repository.init(nodepath.resolve(path), 0 /* isBare */).then((repository) => {
                 // Use repository  
                 console.log(success('Repository was created successfully'));
-                fulfill();
-            }, function(err) {
+                fulfill(repository);
+            }, (err) => {
                 console.log(error(err));
                 reject(err);
             });
