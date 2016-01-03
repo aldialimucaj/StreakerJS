@@ -3,6 +3,7 @@ import nodegit from 'nodegit';
 import nodepath from 'path';
 import Promise from 'promise';
 import moment from 'moment';
+import fs from 'fs';
 
 const Repository = nodegit.Repository;
 const Commit = nodegit.Commit;
@@ -21,12 +22,8 @@ export default class Gitter {
      */
     constructor(repo) {
         if (repo) {
-            this.repo = repo;
-        } else {
-            Repository.open(nodepath.resolve('.')).then(function (repository) {
-                this.repo = repository;
-            });
-        }
+            this._repo = repo;
+        } 
     }
     
     /**
@@ -36,15 +33,22 @@ export default class Gitter {
      * @returns {promise}
      */
     initRepo(path = ".") {
+        var self = this;
         return new Promise((fulfill, reject) => {
-            Repository.init(nodepath.resolve(path), 0 /* isBare */).then((repository) => {
-                this.repo = repository;
-                console.log(success('Repository was created successfully'));
-                fulfill(repository);
-            }, (err) => {
+            let absPath = nodepath.resolve(path);
+            if (fs.exists(absPath + "/.git")) {
+                let err = "Repository already Exists";
                 console.log(error(err));
                 reject(err);
-            });
+            } else {
+                Repository.init(absPath, 0 /* isBare */).then((repository) => {
+                    console.log(success('Repository was created successfully'));
+                    fulfill(repository);
+                }, (err) => {
+                    console.log(error(err));
+                    reject(err);
+                });
+            }
 
         });
     }
@@ -55,7 +59,7 @@ export default class Gitter {
      * @param {Date} date - date to commit
      */
     commit(date = moment()) {
-        let repo = this.repo;
+        let repo = this._repo;
         let name = 'Aldi Alimucaj';
         let email = 'aldi.alimucaj@gmail.com';
         let time = date.unix();
@@ -78,6 +82,11 @@ export default class Gitter {
     /* ========================================================================== */
 
     get repo() {
-        return this.repo;
+        return this._repo;
+    } 
+    
+    set repo(repository) {
+        this._repo = repository;
+        console.log("New Repo set to " + repository);
     }
 }

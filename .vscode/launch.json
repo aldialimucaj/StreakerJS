@@ -7,7 +7,7 @@
 			"request": "launch",
 			"program": "lib/index.js",
 			"stopOnEntry": false,
-			"args": ["init", "/cant_write"],
+			"args": ["commit"],
 			"cwd": ".",
 			"runtimeExecutable": null,
 			"runtimeArgs": [
