@@ -6,6 +6,7 @@ import fse from 'fs-extra';
 let gitter = new Gitter();
 
 const TEST_REPO = "./test/test_repo";
+const WORKING_FILE = 'striker.txt';
 const expect = chai.expect;
 const assert = chai.assert;
 chai.should();
@@ -53,6 +54,18 @@ describe('Gitter', () => {
     
     /* ========================================================================== */
     describe('commit', () => {
-        it('does commit')
+        it('does commit changes', () => {
+            gitter.initRepo(TEST_REPO).then(() => {
+                fse.ensureFileSync(TEST_REPO+"//" +WORKING_FILE);
+                
+                gitter.commit().then(
+                    (success) => {
+                        expect(success).to.be.an('object');
+                    },
+                    (fail) => {
+                        expect(fail).to.be.null;
+                    });
+            });
+        })
     });
 });
