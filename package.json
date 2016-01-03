@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node lib/index.js",
     "lint": "eslint src/",
-    "test": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register --timeout 10000",
     "cover": "babel-node ./node_modules/isparta/lib/cli cover node_modules/mocha/bin/_mocha -- --recursive",
     "cover_push": "babel-node ./node_modules/isparta/lib/cli cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "docs": "jsdoc -d docs src/"

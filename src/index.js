@@ -25,10 +25,10 @@ program
 
 /* ========================================================================== */
 program
-   .command('init')
+   .command('init [repo]')
    .description('Initialize a git repository')
-   .action(() => {
-       gitter.initRepo(); // find out what to do with results
+   .action((repo) => {
+       gitter.initRepo(repo); // find out what to do with results
    });
 
 /* Parse process arguments */
