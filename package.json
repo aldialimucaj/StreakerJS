@@ -1,10 +1,10 @@
 {
-  "name": "Striker",
+  "name": "Streaker",
   "version": "0.0.1",
-  "description": "GitHub Strike Editor",
+  "description": "GitHub Streak Editor",
   "main": "lib/index.js",
   "bin": {
-    "striker": "./lib/index.js"
+    "streaker": "./lib/index.js"
   },
   "scripts": {
     "start": "node lib/index.js",
@@ -16,20 +16,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/alimucaj/striker"
+    "url": "github.com/alimucaj/streaker"
   },
   "keywords": [
-    "striker",
+    "streaker",
     "github",
-    "strike",
+    "streak",
     "editor"
   ],
   "author": "Aldi Alimucaj",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alimucaj/striker/issues"
+    "url": "https://github.com/alimucaj/streaker/issues"
   },
-  "homepage": "https://github.com/alimucaj/striker",
+  "homepage": "https://github.com/alimucaj/streaker",
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-cli": "^6.3.17",
